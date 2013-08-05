@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
 
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
-  # config.ssh.forward_agent = true
+   config.ssh.forward_agent = true
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
@@ -106,10 +106,11 @@ Vagrant.configure("2") do |config|
   # end
 
   config.vm.provision :chef_client do |chef|
-     chef.chef_server_url = "https://api.opscode.com/organizations/adeetiorg"
-     chef.validation_key_path = "./.chef/adeetiorg-validator.pem"
-     chef.validation_client_name = "adeetiorg-validator"
-     chef.node_name = "adeetikaushal"  
+     chef.chef_server_url = "https://api.opscode.com/organizations/vivekorg"
+     chef.validation_key_path = "./.chef/vivekorg-validator.pem"
+     chef.validation_client_name = "vivekorg-validator"
+    # chef.client_key = "./.chef/akaush1.pem"
+     chef.node_name = "akaush1"  
   end
   
   #
